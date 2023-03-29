@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link href="assets/css/style.css" rel="stylesheet">
+        <script src="assets/js/script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="">
+            <nav>
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="create.html" class="nav-button">Create</a>
+                <a href="about-us.html" class="nav-button">About Us</a>
+                <a href="contact-us.html" class="nav-button">Contact Us</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="heading">
+                <h1>Create a survey:</h1>
+                <p>Easily create a survey with custom questions and different answer types using our website!</p>
+            </div>
+            <div id="formdiv">
+            <form id="newform">
+                <label class='question' for="q1">Question 1:</label>
+                <br>
+                <textarea id="q1" name="q1"></textarea>
+                <br>
+                <label for="q1type">Question type:</label>
+                <br>
+                <select name="q1type" id="q1type" onchange="changetype(1);">
+                    <option value="none" selected disabled hidden>Select an Option</option>
+                    <option value="textarea">Text Box</option>
+                    <option value="checkbox">Checkbox</option>
+                    <option value="radio">Radio</option>
+                </select>
+                <br>
+                <div id="options1">
+                </div>
+            </form>
+        </div>
+            <button class="button" onclick="addquestion();">Add question</button>
+            <button class="button" type="submit" form="newform">Submit</button>
+            
+        </main>
+
+        <footer>
+            <p> Copyright &copy; 2023 Survey Masters All rights reservered</p>
+        </footer>
+
+    </body>
+</html>

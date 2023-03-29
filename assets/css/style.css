@@ -1,0 +1,79 @@
+:root {
+    --dark-jungle-green: #071e22;
+    --myrtle-green: #1D7874;
+    --wintergreen-dream: #679289;
+    --peach-crayola: #F4C095;
+    --red-pigment: #EE2E31;
+}
+
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: var(--peach-crayola);
+    padding: 3vh 3vw;
+}
+#heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    height: 9vh;
+    color:white;
+    position: sticky;
+    display:flex;
+    background-color: var(--dark-jungle-green);
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+}
+
+nav{
+    display:flex;
+}
+.nav-button{
+    color:white;
+    text-decoration: none;
+    justify-content: center;
+    background-color: var(--myrtle-green);
+    padding: 1vh 1vw;
+    margin: 2.5vh 1vw;
+    border-radius: 5px;
+}
+.nav-button:hover{
+    transform: scale(1.1);
+}
+#formdiv{
+    width:50%;
+    margin: auto;
+}
+#newform{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+
+textarea[id^='q']{
+    width: 100%;
+    height: 6vh;
+}
+footer{
+    color:white;
+    display: inline-flex;
+    bottom: 0;
+    margin: 0;
+    padding: 2vh;
+    font-size: 0.8em;
+    background-color: var(--dark-jungle-green);
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+
