@@ -16,6 +16,25 @@ main{
     background-color: var(--peach-crayola);
     padding: 3vh 3vw;
 }
+
+.main_grid {
+    display: grid;
+    grid-template-columns: fit-content(250px) fit-content(250px) fit-content(200px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    }
+    
+    .main_h1 { 
+        grid-area: 1 / 1 / 2 / 3;
+        text-align: left;
+    }
+    .main_p { 
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: left;
+    }
+    .main_img { grid-area: 2 / 2 / 3 / 3; }
+
 #heading{
     display: flex;
     flex-direction: column;
