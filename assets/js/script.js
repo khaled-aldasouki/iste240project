@@ -23,6 +23,8 @@ function addquestion(){
     const question = document.createElement('textarea');
     question.setAttribute('name','q'+n);
     question.setAttribute('id','q'+n);
+    question.placeholder = 'Enter the question here...'
+
     form.append(question);
     form.append(document.createElement('br'));
 
@@ -68,10 +70,13 @@ function addquestion(){
     const div = document.createElement('div');
     div.setAttribute('id','options' + n);
     form.append(div);
+    div.scrollIntoView();
+
 }
 
 //function used to chang the type of answer a question uses
 function changetype(n){
+    let brelem = document.createElement('br');
     let option = document.getElementById('q'+n+'type');
     let div = document.getElementById('options' + n);
     var val= option.value;
@@ -80,18 +85,25 @@ function changetype(n){
     }
     if (val == "textarea"){
         let node = document.createElement('textarea');
-        div.appendChild(node);
+        node.style.width = '100%'
+        node.placeholder = 'Enter any intial answer here...'
+        div.append(node);
     } 
     else{
         
         let node1 = document.createElement('textarea');
-        node1.innerHTML = 'option 1';
+        node1.placeholder = 'option 1';
+        node1.id = 'multi';
         let node2 = document.createElement('textarea');
-        node2.innerHTML = 'option 2';
+        node2.placeholder = 'option 2';
+        node2.id = 'multi';
         let node3 = document.createElement('textarea');
-        node3.innerHTML = 'option 3';
+        node3.placeholder = 'option 3';
+        node3.id = 'multi';
         let node4 = document.createElement('textarea');
-        node4.innerHTML = 'option 4';
-        div.append(node1,node2,node3,node4);
+        node4.placeholder = 'option 4';
+        node4.id = 'multi';
+
+        div.append(node1,document.createElement('br'),node2,document.createElement('br'),node3,document.createElement('br'),node4);
     }
 }   

@@ -2,6 +2,7 @@
     --dark-jungle-green: #071e22;
     --myrtle-green: #1D7874;
     --wintergreen-dream: #679289;
+    --turqouise-green:  #57b7a2;
     --peach-crayola: #F4C095;
     --red-pigment: #EE2E31;
 }
@@ -14,10 +15,13 @@
 }
 
 main{
-    background-color: var(--peach-crayola);
     padding: 3vh 3vw;
 }
-
+body{
+    position:relative;
+    min-height: 100vh;    
+    background-color: var(--peach-crayola);
+}
 .main_grid {
     display: grid;
     grid-template-columns: fit-content(250px) fit-content(250px) fit-content(100px);
@@ -58,6 +62,13 @@ header{
     justify-content: space-between;
 }
 
+h1{
+    font-size: 4rem;
+    margin: 1vh;
+}
+p{
+    font-size: 0.9rem;
+}
 nav{
     display:flex;
 }
@@ -69,13 +80,34 @@ nav{
     padding: 1vh 1vw;
     margin: 2.5vh 1vw;
     border-radius: 5px;
+    transition: 0.1s;
 }
 .nav-button:hover{
     transform: scale(1.1);
 }
+label{font-weight: bold;}
 #formdiv{
+    font-size: 1.25rem;
     width:50%;
-    margin: auto;
+    margin: 5vh auto 12vh;
+    border-radius: 20px;
+    background-color: var(--turqouise-green);
+    padding: 5vh 3vw;
+}
+textarea,input,select,button{  
+    padding: 0.5vh 0.5vw;
+    border-radius: 10px;
+}
+textarea{
+    resize:vertical;
+    font-size: 0.95rem;
+}
+div[id^=options]{
+    width: 100%;
+}
+div[id^=options] textarea#multi{
+    padding: 1.5vh 0.5vw;
+    width: 100%;
 }
 #newform{
     display: flex;
@@ -83,7 +115,19 @@ nav{
     align-items: self-start;
 }
 
-
+#button-div{
+    display: flex;
+    justify-content: center;
+}
+button,input{
+    font-size: 1.1rem;
+    margin: 1vh 2vw;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+button:hover,input:hover{
+    transform: scale(1.05);
+}
 textarea[id^='q']{
     width: 100%;
     height: 6vh;
@@ -94,12 +138,25 @@ footer{
     bottom: 0;
     margin: 0;
     padding: 2vh;
-    font-size: 0.8em;
+    font-size: 0.9em;
     background-color: var(--dark-jungle-green);
     width: 100%;
     justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    height: 8vh;
 }
 
 
 
-
+#thank-you{
+    padding: 10% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#thank-you p{
+    font-size: 1.2rem;
+    margin: 3vh 0;
+}

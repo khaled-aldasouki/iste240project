@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Homepage</title>
+        <title>Create a Survey</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link href="assets/css/style.css" rel="stylesheet">
         <script src="assets/js/script.js"></script>
@@ -21,16 +21,15 @@
 
         <main>
             <div id="heading">
-                <h1>Create a survey:</h1>
-                <p>Easily create a survey with custom questions and different answer types using our website!</p>
+                <h1>Create a survey</h1>
             </div>
             <div id="formdiv">
             <form id="newform">
                 <label class='question' for="q1">Question 1:</label>
                 <br>
-                <textarea id="q1" name="q1"></textarea>
+                <textarea id="q1" name="q1" placeholder='Enter the question here...'></textarea>
                 <br>
-                <label for="q1type">Question type:</label>
+                <label for="q1type">Question 1 type:</label>
                 <br>
                 <select name="q1type" id="q1type" onchange="changetype(1);">
                     <option value="none" selected disabled hidden>Select an Option</option>
@@ -42,10 +41,12 @@
                 <div id="options1">
                 </div>
             </form>
+            <div id="button-div">
+                <button class="button" onclick="addquestion();">Add question</button>
+                <button class="button" type="submit" form="newform">Submit</button>
+            </div>
         </div>
-            <button class="button" onclick="addquestion();">Add question</button>
-            <button class="button" type="submit" form="newform">Submit</button>
-            
+ 
         </main>
 
         <footer>
