@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link href="assets/css/style.css" rel="stylesheet">
         <script src="assets/js/script.js"></script>
+        <meta charset="utf-8" />
+        <link rel="icon" href="assets/media/icon.png" />
     </head>
 
     <body>
@@ -24,14 +26,14 @@
                 <h1>Create a survey</h1>
             </div>
             <div id="formdiv">
-            <form id="newform">
+            <form id="newform" onsubmit="return validateNewForm();">
                 <label class='question' for="q1">Question 1:</label>
                 <br>
-                <textarea id="q1" name="q1" placeholder='Enter the question here...'></textarea>
+                <textarea id="q1" name="q1" placeholder='Enter the question here...' required></textarea>
                 <br>
                 <label for="q1type">Question 1 type:</label>
                 <br>
-                <select name="q1type" id="q1type" onchange="changetype(1);">
+                <select required name="q1type" id="q1type" onchange="changetype(1);" >
                     <option value="none" selected disabled hidden>Select an Option</option>
                     <option value="textarea">Text Box</option>
                     <option value="checkbox">Checkbox</option>

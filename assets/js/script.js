@@ -23,6 +23,7 @@ function addquestion(){
     const question = document.createElement('textarea');
     question.setAttribute('name','q'+n);
     question.setAttribute('id','q'+n);
+    question.setAttribute('required','true');
     question.placeholder = 'Enter the question here...'
 
     form.append(question);
@@ -40,6 +41,7 @@ function addquestion(){
     const select = document.createElement('select');
     select.setAttribute('name','q'+n+'type');
     select.setAttribute('id','q'+n+'type');
+    select.setAttribute('required','true');
     select.setAttribute('onchange','changetype('+n+');');
     form.append(select);
     form.append(document.createElement('br'));
@@ -87,23 +89,47 @@ function changetype(n){
         let node = document.createElement('textarea');
         node.style.width = '100%'
         node.placeholder = 'Enter any intial answer here...'
+        node.setAttribute('name','q'+n+'textbox');
         div.append(node);
     } 
     else{
         
         let node1 = document.createElement('textarea');
         node1.placeholder = 'option 1';
-        node1.id = 'multi';
+        node1.setAttribute('class','multi');
+        node1.setAttribute('required','true');
+        node1.setAttribute('name','q'+n+'option1');
+
         let node2 = document.createElement('textarea');
         node2.placeholder = 'option 2';
-        node2.id = 'multi';
+        node2.setAttribute('class','multi');
+        node2.setAttribute('required','true');
+        node2.setAttribute('name','q'+n+'option1');
+
         let node3 = document.createElement('textarea');
         node3.placeholder = 'option 3';
-        node3.id = 'multi';
+        node3.setAttribute('class','multi');
+        node3.setAttribute('required','true');
+        node3.setAttribute('name','q'+n+'option1');
+
         let node4 = document.createElement('textarea');
         node4.placeholder = 'option 4';
-        node4.id = 'multi';
+        node4.setAttribute('class','multi');
+        node4.setAttribute('required','true');
+        node4.setAttribute('name','q'+n+'option1');
+
 
         div.append(node1,document.createElement('br'),node2,document.createElement('br'),node3,document.createElement('br'),node4);
     }
 }   
+
+function validateNewForm(){
+    let n = document.getElementsByClassName("question").length;
+    for (let i=1;i<=n;i++){
+        if (document.forms["newform"]["q"+i+"type"].value == "none"){
+            alert("Select an answer type for question " + i);
+            return false;
+        }
+    }
+    return true;
+}
