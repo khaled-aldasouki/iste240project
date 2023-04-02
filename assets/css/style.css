@@ -6,7 +6,7 @@
     --peach-crayola: #F4C095;
     --red-pigment: #EE2E31;
 }
-
+html{font-size: 8px;}
 *{
     font-family: 'Lucida Sans Regular', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
     margin: 0;
@@ -19,7 +19,7 @@
     margin: 1vh 1vw;
 }
 main{
-    padding: 3vh 3vw;
+    padding: 1vh 1vw;
 }
 body{
     position:relative;
@@ -47,7 +47,7 @@ body{
     padding: 5%;
 }
 .p_div{
-    font-size: 15px;
+    font-size: 1.7rem;
 }
 .main_img { 
     grid-area: 3 / 1 / 4 / 2;    
@@ -116,8 +116,8 @@ nav{
 }
 label{font-weight: bold;}
 #formdiv{
-    font-size: 1.25rem;
-    width:50%;
+    font-size: 2rem;
+    width:90%;
     margin: 5vh auto 12vh;
     border-radius: 20px;
     background-color: var(--turqouise-green);
@@ -129,7 +129,7 @@ textarea,input,select,button{
 }
 textarea{
     resize:vertical;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
 }
 div[id^=options]{
     width: 100%;
@@ -149,7 +149,7 @@ div[id^=options] textarea.multi{
     justify-content: center;
 }
 button,input{
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     margin: 1vh 2vw;
     border-radius: 10px;
     transition: 0.2s;
@@ -167,7 +167,6 @@ footer{
     bottom: 0;
     margin: 0;
     padding: 2vh;
-    font-size: 0.9em;
     background-color: var(--dark-jungle-green);
     width: 100%;
     justify-content: center;
@@ -177,6 +176,9 @@ footer{
 }
 
 
+footer p{
+    font-size: 1.5rem;
+}
 
 #thank-you{
     padding: 10% 0;
@@ -225,6 +227,11 @@ footer{
 }
 
 @media screen and (min-width: 768px){
+    html{font-size: 10px;}
+    main{
+        padding: 3vh 3vw;
+    }
+
     .main_h1 { 
         grid-area: 1 / 1 / 2 / 2; 
     }
@@ -234,8 +241,35 @@ footer{
     .main_img { 
         grid-area: 1 / 2 / 3 / 3; 
     }
+    footer p{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 1600px){
+    html{font-size: 16px;}
+
+    #formdiv{
+        font-size: 1.25rem;
+        width:50%;
+        padding: 5vh 3vw;
+    }
+    textarea,input,select,button{  
+        padding: 0.5vh 0.5vw;
+        border-radius: 10px;
+    }
+    textarea{
+        font-size: 0.95rem;
+    }
+    button,input{
+        font-size: 1.1rem;
+    }
+    footer{
+        height: 8vh;
+    }
+
+    footer p{
+        font-size: 0.95rem;
+    }
 
 }
