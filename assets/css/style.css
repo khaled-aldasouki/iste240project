@@ -14,6 +14,10 @@
     scroll-behavior: smooth;
 }
 
+.logo{
+    border-radius: 15px;
+    margin: 1vh 1vw;
+}
 main{
     padding: 3vh 3vw;
 }
