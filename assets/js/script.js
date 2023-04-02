@@ -1,15 +1,5 @@
 
-
-function showMenu(){
-    var nav = document.getElementById("nav");
-    if (nav.style.visibility == "hidden"){
-      nav.style.visibility = "visible";    }
-    else{
-      if (window.innerWidth < 1600){
-        nav.style.visibility = "hidden";
-    }
-    }
-}
+window.onload = function(){showMenu()};
 
 //function used to add a question when creating a survey
 function addquestion(){
@@ -142,5 +132,19 @@ function validateNewForm(){
         }
     }
     return true;
+}
+
+
+function showMenu(){
+    var nav = document.getElementById("nav");
+    if (nav.style.visibility == "hidden"){
+        nav.style.visibility = "visible";   
+        nav.style.opacity=1; }
+    else{
+      if (window.innerWidth < 1600){
+        nav.style.visibility = "hidden";
+        nav.style.opacity=0; }
+
+    }
 }
 
