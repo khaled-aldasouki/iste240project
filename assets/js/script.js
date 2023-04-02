@@ -1,5 +1,15 @@
 
 
+function showMenu(){
+    var nav = document.getElementById("nav");
+    if (nav.style.visibility == "hidden"){
+      nav.style.visibility = "visible";    }
+    else{
+      if (window.innerWidth < 1600){
+        nav.style.visibility = "hidden";
+    }
+    }
+}
 
 //function used to add a question when creating a survey
 function addquestion(){
@@ -133,3 +143,4 @@ function validateNewForm(){
     }
     return true;
 }
+
