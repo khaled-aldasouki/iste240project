@@ -294,6 +294,10 @@ footer p{
     .review_div5 { grid-area: 1 / 5 / 2 / 6; }
     .review_div6 { grid-area: 1 / 6 / 2 / 7; }
 
+    .person_review{
+        font-size: 1.2rem;
+    }
+
     footer p{
         font-size: 1rem;
     }
