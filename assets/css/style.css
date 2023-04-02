@@ -28,11 +28,11 @@ body{
 }
 .main_grid {
     display: grid;
-    grid-template-columns: fit-content(250px) fit-content(250px) fit-content(100px);
+    grid-template-columns: fit-content(20px) fit-content(20px) fit-content(10px);
     grid-column-gap: 20px;
     grid-row-gap: 5px;
-    justify-content: space-around;
     padding: 5%;
+    justify-content: center;
     }
     
 .main_h1 { 
@@ -54,8 +54,7 @@ body{
 }
 .survey_img{
     border-radius: 50px;
-    height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 .reviews {
@@ -256,6 +255,18 @@ footer p{
         padding: 3vh 3vw;
     }
 
+    .main_grid{
+        align-items: center;
+        justify-content: center;
+    }
+    .p_div{
+        font-size: 1.3rem;
+    }
+
+    a{
+        font-size: 1.5rem;
+    }
+
     .main_h1 { 
         grid-area: 1 / 1 / 2 / 2; 
     }
@@ -285,6 +296,11 @@ footer p{
 
     footer p{
         font-size: 1rem;
+    }
+
+    .survey_img{
+        border-radius: 50px;
+        width: auto;
     }
 }
 
