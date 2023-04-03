@@ -141,7 +141,7 @@ function showMenu(){
         nav.style.visibility = "visible";   
         nav.style.opacity=1; }
     else{
-      if (window.innerWidth < 1600){
+      if (window.innerWidth < 768){
         nav.style.visibility = "hidden";
         nav.style.opacity=0; }
 

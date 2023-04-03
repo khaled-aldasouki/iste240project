@@ -266,7 +266,9 @@ footer p{
 @media screen and (min-width: 768px){
 
     html{font-size: 10px;}
-    
+    #formdiv{
+        width:80%;
+    }
     #menu{visibility: hidden;}
     nav{
         opacity: 1;
@@ -274,6 +276,9 @@ footer p{
         visibility: visible;
         flex-direction: row;
         position: sticky;
+    }
+    textarea[id^='q']{
+        height: 9vh;
     }
     .nav-button{
         color:white;
@@ -284,7 +289,7 @@ footer p{
         margin: 2.5vh 1vw;
         border-radius: 5px;
         transition: 0.1s;
-        font-size: 1rem;
+        font-size: 1.5rem;
         width: auto;
     }
     main{
