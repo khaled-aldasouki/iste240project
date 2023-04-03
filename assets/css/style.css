@@ -72,22 +72,28 @@ body{
 }
 .review_div2 { 
     grid-area: 1 / 2 / 2 / 3;
+    padding-top: 5vh;
 }
 .review_div3 { 
     grid-area: 2 / 1 / 3 / 2; 
 }
 .review_div4 { 
     grid-area: 2 / 2 / 3 / 3;
+    padding-top: 5vh;
 }
 .review_div5 { 
     grid-area: 3 / 1 / 4 / 2; 
 }
 .review_div6 { 
-    grid-area: 3 / 2 / 4 / 3; 
+    grid-area: 3 / 2 / 4 / 3;
+    padding-top: 5vh; 
 }
 
 .person_img{
-    border-radius: 50px;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .person_review{
@@ -364,6 +370,24 @@ footer p{
 
     footer p{
         font-size: 0.95rem;
+    }
+
+    .survey_img{
+        border-radius: 50px;
+        width: 1000px;
+    }
+
+    a{
+        font-size: 1.7rem;
+    }
+
+    .main_grid{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main_p { 
+        grid-area: 2 / 1 / 3 / 2; 
     }
 
 }
