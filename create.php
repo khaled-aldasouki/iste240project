@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+session_start();
+?><!DOCTYPE html>
 
 <html>
     <head>
@@ -11,18 +14,9 @@
     </head>
 
     <body>
-        <header>
-            <img class="logo" src="assets/media/logo.png">
-            <img id="menu" src="assets/media/menu.png" onclick="showMenu();">
-            <nav id="nav">
-                <a href="index.html" class="nav-button">Home</a>
-                <a href="create.html" class="nav-button">Create</a>
-                <a href="surveys.html" class="nav-button">Surveys</a>
-                <a href="contact-us.html" class="nav-button">Contact Us</a>
-                <a href="login.html" class="nav-button">Login</a>
-
-            </nav>
-        </header>
+        
+                <?php include 'nav.php'?>
+        
 
         <main>
             <div class="heading">
@@ -32,7 +26,7 @@
             <form id="newform" onsubmit="return validateNewForm();">
                 <label class='question' for="survey-name">Survey Name:</label>
                 <br>
-                <input type="text" id="survey-name" name="survey-name" placeholder='Enter the survey name...' required></input>
+                <input type="text" id="survey-name" maxlength="30" name="survey-name" placeholder='Enter the survey name...' required></input>
                 <label class='question' for="q1">Question 1:</label>
                 <br>
                 <textarea id="q1" name="q1" placeholder='Enter the question here...' required></textarea>

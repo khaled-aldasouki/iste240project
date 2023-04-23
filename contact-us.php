@@ -1,3 +1,7 @@
+<?php
+
+session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -11,19 +15,9 @@
     </head>
 
     <body>
-        <header>
-            <img class="logo" src="assets/media/logo.png">
-            <img id="menu" src="assets/media/menu.png" onclick="showMenu();">
-
-            <nav id="nav">
-                <a href="index.html" class="nav-button">Home</a>
-                <a href="create.html" class="nav-button">Create</a>
-                <a href="surveys.html" class="nav-button">Surveys</a>
-                <a href="contact-us.html" class="nav-button">Contact Us</a>
-                <a href="login.html" class="nav-button">Login</a>
-
-            </nav>
-        </header>
+        
+                <?php include 'nav.php'?>
+         
         <main>
             <div class="heading">
                 <h1>Contact Us</h1>
