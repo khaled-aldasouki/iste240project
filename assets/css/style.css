@@ -13,7 +13,10 @@ html{font-size: 8px;}
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+h2{
+    font-size: 4rem;
+    margin-bottom: 7vh;
+}
 .logo{
     border-radius: 15px;
     margin: 1vh 1vw;
@@ -160,13 +163,21 @@ nav{
     transform: scale(1.1);
 }
 label{font-weight: bold;}
-#formdiv{
+#formdiv, #login-form-div{
     font-size: 2.5rem;
     width:90%;
     margin: 5vh auto 12vh;
     border-radius: 20px;
     background-color: var(--turqouise-green);
     padding: 5vh 3vw;
+}
+#signuplink{
+    font-size: 1.8rem;
+}
+#login-form-div{
+    font-size: 3.5rem;
+    width:90%;
+    text-align: center;
 }
 textarea,input,select,button{  
     padding: 0.5vh 0.5vw;
@@ -199,7 +210,7 @@ button,input{
     border-radius: 10px;
     transition: 0.2s;
 }
-button:hover,input:hover{
+button:hover{
     transform: scale(1.05);
 }
 textarea[id^='q']{
@@ -274,7 +285,7 @@ footer p{
 @media screen and (min-width: 768px){
 
     html{font-size: 10px;}
-    #formdiv{
+    #formdiv,#login-form-div{
         width:80%;
     }
     .p_div{
@@ -306,7 +317,9 @@ footer p{
     main{
         padding: 3vh 3vw;
     }
-
+    table tr td:last-child{
+        width: 120px;
+    }
     .main_grid{
         align-items: center;
         justify-content: center;
@@ -364,6 +377,7 @@ footer p{
         width: 20vw;
         height: 20vw;
     }
+    
 }
 
 @media screen and (min-width: 1600px){
@@ -388,10 +402,17 @@ footer p{
         font-size: 1rem;
         width: auto;
     }
-    #formdiv{
+    #formdiv,#login-form-div{
         font-size: 1.25rem;
         width:50%;
         padding: 5vh 3vw;
+    }
+    #login-form-div{
+        font-size: 2.25rem;
+        width:40%;
+    }
+    #signuplink{
+        font-size: 0.8rem;
     }
     textarea,input,select,button{  
         padding: 0.5vh 0.5vw;

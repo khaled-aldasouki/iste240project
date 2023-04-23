@@ -17,8 +17,10 @@
             <nav id="nav">
                 <a href="index.html" class="nav-button">Home</a>
                 <a href="create.html" class="nav-button">Create</a>
-                <a href="about-us.html" class="nav-button">About Us</a>
+                <a href="surveys.html" class="nav-button">Surveys</a>
                 <a href="contact-us.html" class="nav-button">Contact Us</a>
+                <a href="login.html" class="nav-button">Login</a>
+
             </nav>
         </header>
 
@@ -28,6 +30,9 @@
             </div>
             <div id="formdiv">
             <form id="newform" onsubmit="return validateNewForm();">
+                <label class='question' for="survey-name">Survey Name:</label>
+                <br>
+                <input type="text" id="survey-name" name="survey-name" placeholder='Enter the survey name...' required></input>
                 <label class='question' for="q1">Question 1:</label>
                 <br>
                 <textarea id="q1" name="q1" placeholder='Enter the question here...' required></textarea>
@@ -37,8 +42,8 @@
                 <select required name="q1type" id="q1type" onchange="changetype(1);" >
                     <option value="none" selected disabled hidden>Select an Option</option>
                     <option value="textarea">Text Box</option>
-                    <option value="checkbox">Checkbox</option>
-                    <option value="radio">Radio</option>
+                    <option value="truefalse">True/False</option>
+                    <option value="mc">Multiple Choice</option>
                 </select>
                 <br>
                 <div id="options1">

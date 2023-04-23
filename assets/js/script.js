@@ -58,11 +58,11 @@ function addquestion(){
     option1.setAttribute('value','textarea');
     option1.innerHTML = 'Text Box';
     const option2 = document.createElement('option');
-    option2.setAttribute('value','checkbox');
-    option2.innerHTML = 'checkbox';
+    option2.setAttribute('value','truefalse');
+    option2.innerHTML = 'True/False';
     const option3 = document.createElement('option');
-    option3.setAttribute('value','radio');
-    option3.innerHTML = 'radio';
+    option3.setAttribute('value','mc');
+    option3.innerHTML = 'Multiple Choice';
         
     select.append(option0,option1,option2,option3);
 
@@ -92,7 +92,7 @@ function changetype(n){
         node.setAttribute('name','q'+n+'textbox');
         div.append(node);
     } 
-    else{
+    else if (val == "mc"){
         
         let node1 = document.createElement('textarea');
         node1.placeholder = 'option 1';
@@ -104,22 +104,36 @@ function changetype(n){
         node2.placeholder = 'option 2';
         node2.setAttribute('class','multi');
         node2.setAttribute('required','true');
-        node2.setAttribute('name','q'+n+'option1');
+        node2.setAttribute('name','q'+n+'option2');
 
         let node3 = document.createElement('textarea');
         node3.placeholder = 'option 3';
         node3.setAttribute('class','multi');
         node3.setAttribute('required','true');
-        node3.setAttribute('name','q'+n+'option1');
+        node3.setAttribute('name','q'+n+'option3');
 
         let node4 = document.createElement('textarea');
         node4.placeholder = 'option 4';
         node4.setAttribute('class','multi');
         node4.setAttribute('required','true');
-        node4.setAttribute('name','q'+n+'option1');
+        node4.setAttribute('name','q'+n+'option4');
 
 
         div.append(node1,document.createElement('br'),node2,document.createElement('br'),node3,document.createElement('br'),node4);
+    }
+    else {
+        let node1 = document.createElement('textarea');
+        node1.placeholder = 'True';
+        node1.setAttribute('class','multi');
+        node1.setAttribute('disabled','true');
+        node1.setAttribute('name','q'+n+'option1');
+
+        let node2 = document.createElement('textarea');
+        node2.placeholder = 'False';
+        node2.setAttribute('class','multi');
+        node2.setAttribute('disabled','true');
+        node2.setAttribute('name','q'+n+'option2');
+        div.append(node1,document.createElement('br'),node2,document.createElement('br'));
     }
 }   
 

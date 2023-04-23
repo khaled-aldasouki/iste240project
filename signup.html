@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Contact Us</title>
+        <title>Sign up</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link href="assets/css/style.css" rel="stylesheet">
         <script src="assets/js/script.js"></script>
@@ -24,17 +24,26 @@
 
             </nav>
         </header>
-        <main>
-            <div class="heading">
-                <h1>Contact Us</h1>
-            </div>
-            <div id="tabs">
-                <a class="tab" id="wa" href="https://wa.me/XXXXXXXXXXX"></a>
-                <a class="tab" id="email" href="mailto: kaa5082@rit.edu"></a>
-                <a class="tab" id="telephone" href="tel:XXXXXXXXXXX"></a>
 
+        <main>
+            <div id="login-form-div">
+            <form id="login-form">
+                <h2>Sign up</h2>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" required><br>
+                <br>
+                <label for="password">Password: </label><br>
+                <input type="password" id="password" required><br>
+                <br>
+                <label for="confirm-password">Confirm Password: </label><br>
+                <input type="password" id="confirm-password" required><br>
+                <button class="button" type="submit">Sign up</button><br>
+                <a id="signuplink" href="login.html">Already have an account? Login</a>
+
+            </form>
         </div>
         </main>
+
         <footer>
             <p> Copyright &copy; 2023 Survey Masters All rights reservered</p>
         </footer>
