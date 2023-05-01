@@ -5,7 +5,7 @@ window.onload = function(){showMenu()};
 function addquestion(){
     
     let questions = document.getElementsByClassName("question");
-    let n = questions.length + 1;
+    let n = questions.length ;
     let form = document.getElementById('newform');
     form.append(document.createElement('br'));
 
@@ -125,14 +125,14 @@ function changetype(n){
         let node1 = document.createElement('textarea');
         node1.placeholder = 'True';
         node1.setAttribute('class','multi');
-        node1.setAttribute('disabled','true');
-        node1.setAttribute('name','q'+n+'option1');
+        node1.setAttribute('maxlength','0');
+        node1.setAttribute('name','q'+n+'bool1');
 
         let node2 = document.createElement('textarea');
         node2.placeholder = 'False';
         node2.setAttribute('class','multi');
-        node2.setAttribute('disabled','true');
-        node2.setAttribute('name','q'+n+'option2');
+        node2.setAttribute('maxlength','0');
+        node2.setAttribute('name','q'+n+'bool2');
         div.append(node1,document.createElement('br'),node2,document.createElement('br'));
     }
 }   

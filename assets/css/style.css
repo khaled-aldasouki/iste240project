@@ -136,6 +136,7 @@ p{
     width: 7vh;
     height: 7vh;
 }
+
 nav{
     opacity: 0;
     visibility: hidden;
@@ -209,6 +210,7 @@ button,input{
     margin: 1vh 2vw;
     border-radius: 10px;
     transition: 0.2s;
+    background-color: red;
 }
 button:hover{
     transform: scale(1.05);
@@ -281,7 +283,10 @@ footer p{
     filter: brightness(80%);
     transform: scale(1.05);
 }
-
+.crud{
+    width: 3vw;
+    background-color: red;
+}
 @media screen and (min-width: 768px){
 
     html{font-size: 10px;}

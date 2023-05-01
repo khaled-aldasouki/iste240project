@@ -13,8 +13,6 @@ $user_id = trim($_SESSION["logged_in_id"]);
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="stylesheet" href="assets/css/bootstrap.css">
         <link href="assets/css/style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="assets/js/script.js"></script>
         <meta charset="utf-8" />
         <link rel="icon" href="assets/media/icon.png" />
@@ -25,19 +23,6 @@ $user_id = trim($_SESSION["logged_in_id"]);
                 <?php include 'nav.php'?>
          
         <main>
-            <script>
-                function delete_survey(id){
-                    $.ajax({    
-                        type: "GET",
-                        url: "delete-survey.php", 
-                        data:{quiz_id:id},            
-                        dataType: "html",                  
-                        success: function(data){   
-                            window.location.href = "surveys.php";
-                        }
-                    });
-                };
-                </script>
             <div class="heading">
                 <h1><?php echo $name ?>'s Surveys</h1>
             </div>
@@ -79,10 +64,10 @@ $user_id = trim($_SESSION["logged_in_id"]);
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['name'] . "</textarea>";
-                                        echo "<td><button class=' crud' onclick='navigator.clipboard.writeText(`$sharelink`);alert(`link copied`)'>Copy Link</button></td>";
-                                        echo '<td><button class="crud" onclick="window.location.href = `update.php?quiz_id='. $rowid.'`"</button>update</td>';
+                                        echo "<td><a class='nav-button' onclick='navigator.clipboard.writeText(`$sharelink`);alert(`link copied`)'>Copy Link</a></td>";
+                                        echo '<td><a class="nav-button" href="../update.php?quiz_id='. $rowid.'"</a>update</td>';
                                         echo "<td>";
-                                        echo '<button class="crud" onclick="delete_survey(`'. $rowid .'`);" title="Delete Record"</button>delete</td>';
+                                        echo '<a class="nav-button" href="delete_survey('.$rowid.');" title="Delete Record"</a>delete</td>';
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
