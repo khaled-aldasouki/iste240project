@@ -42,7 +42,7 @@ if(isset($_GET["new_name"]) && !empty($_GET["new_name"])){
 
 <html>
     <head>
-        <title>Create a Survey</title>
+        <title>Update Survey</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link href="assets/css/style.css" rel="stylesheet">
         <script src="assets/js/script.js"></script>
